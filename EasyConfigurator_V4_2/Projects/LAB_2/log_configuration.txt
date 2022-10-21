@@ -1,0 +1,94 @@
+
+Easy Configurator, configuration engine  V_3_2 
+
+log created on Wed Dec 15 18:21:46 2021
+
+Analyzing the project file
+
+Easy Configurator project LAB_2.prj
+
+OUTPUTS_TAG
+Line 4 --- Segments                uint8_t
+INPUTS_TAG
+Line 6 --- Potentiometer           uint16_t
+Line 7 --- Switches                uint8_t
+INFO_TAG
+0x0000079A
+AB&amp;T
+0xABABA002
+0x00000001
+LAB_2
+LAB_2
+END_TAG
+
+The LAB_2.prj configuration file is correct
+
+ByteNumOut 1
+ByteNumIn  3
+PdoNumOut  1
+PdoNumIn   2
+
+Creating the LAB_2.xml file
+
+PROJECT_TAG   LAB_2.prj
+VENDOID_TAG   0000079A
+VEN_NAM_TAG   AB&amp;T
+PRO_COD_TAG   ABABA002
+REVISIO_TAG   00000001
+DEV_NAM_TAG   LAB_2
+DEV_NAM_TAG   LAB_2
+
+FIRST_TAG
+
+Output entries
+          <Entry>
+            <Index>#x5</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>8</BitLen>
+            <Name>Segments</Name>
+            <DataType>USINT</DataType>
+          </Entry>
+
+SECOND_TAG
+
+Input entries
+          <Entry>
+            <Index>#x6</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Potentiometer</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>8</BitLen>
+            <Name>Switches</Name>
+            <DataType>USINT</DataType>
+          </Entry>
+
+LAST_TAG
+
+The LAB_2.xml file has been created
+
+Creating the LAB_2.h file
+
+#define CUST_BYTE_NUM_OUT	1
+#define CUST_BYTE_NUM_IN	3
+#define TOT_BYTE_NUM_ROUND_OUT	4
+#define TOT_BYTE_NUM_ROUND_IN	4
+
+
+Output entries
+		uint8_t     Segments;
+
+Input entries
+		uint16_t    Potentiometer;
+		uint8_t     Switches;
+
+The LAB_2.h file has been created
+
+Creating the LAB_2.bin file
+
+
+The LAB_2.bin file has been created

@@ -1,0 +1,137 @@
+
+Easy Configurator, configuration engine  V_3_3 
+
+log created on Mon Aug 22 11:26:46 2022
+
+Analyzing the project file
+
+Easy Configurator project myCustomSlave.prj
+
+OUTPUTS_TAG
+Line 4 --- myOutput_1              uint8_t
+Line 5 --- myOutput_2              uint32_t
+Line 6 --- myOutput_3              int16_t
+Line 7 --- myOutput_4              int64_t
+Line 8 --- TheLastOutput           float
+INPUTS_TAG
+Line 10 --- myInput_1               int16_t
+Line 11 --- myInput_2               int8_t
+Line 12 --- anOtherInput            float
+INFO_TAG
+0x0000079A
+AB&amp;T
+0xDEADBEEF
+0x00000001
+myCustomSlave
+myCustomSlave
+END_TAG
+
+The myCustomSlave.prj configuration file is correct
+
+ByteNumOut 19
+ByteNumIn  7
+PdoNumOut  5
+PdoNumIn   3
+
+Creating the myCustomSlave.xml file
+
+PROJECT_TAG   myCustomSlave.prj
+VENDOID_TAG   0000079A
+VEN_NAM_TAG   AB&amp;T
+PRO_COD_TAG   DEADBEEF
+REVISIO_TAG   00000001
+DEV_NAM_TAG   myCustomSlave
+DEV_NAM_TAG   myCustomSlave
+
+FIRST_TAG
+
+Output entries
+          <Entry>
+            <Index>#x5</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>64</BitLen>
+            <Name>myOutput_4</Name>
+            <DataType>LINT</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x5</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>myOutput_2</Name>
+            <DataType>UDINT</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x5</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>TheLastOutput</Name>
+            <DataType>REAL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x5</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>myOutput_3</Name>
+            <DataType>INT</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x5</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>8</BitLen>
+            <Name>myOutput_1</Name>
+            <DataType>USINT</DataType>
+          </Entry>
+
+Input entries
+          <Entry>
+            <Index>#x6</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>anOtherInput</Name>
+            <DataType>REAL</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>myInput_1</Name>
+            <DataType>INT</DataType>
+          </Entry>
+          <Entry>
+            <Index>#x6</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>8</BitLen>
+            <Name>myInput_2</Name>
+            <DataType>SINT</DataType>
+          </Entry>
+
+LAST_TAG
+
+The myCustomSlave.xml file has been created
+
+Creating the myCustomSlave.h file
+
+#define CUST_BYTE_NUM_OUT	19
+#define CUST_BYTE_NUM_IN	7
+#define TOT_BYTE_NUM_ROUND_OUT	20
+#define TOT_BYTE_NUM_ROUND_IN	8
+
+
+Output entries
+		int64_t     myOutput_4;
+		uint32_t    myOutput_2;
+		float       TheLastOutput;
+		int16_t     myOutput_3;
+		uint8_t     myOutput_1;
+
+Input entries
+		float       anOtherInput;
+		int16_t     myInput_1;
+		int8_t      myInput_2;
+
+The myCustomSlave.h file has been created
+
+Creating the myCustomSlave.bin file
+
+
+The myCustomSlave.bin file has been created

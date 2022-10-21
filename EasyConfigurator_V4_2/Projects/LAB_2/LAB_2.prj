@@ -1,0 +1,16 @@
+LAB_2
+OUTPUTS_TAG
+Segments
+uint8_t
+INPUTS_TAG
+Potentiometer
+uint16_t
+Switches
+uint8_t
+INFO_TAG
+0x0000079A
+AB&amp;T
+0xABABA002
+0x00000001
+LAB_2
+END_TAG

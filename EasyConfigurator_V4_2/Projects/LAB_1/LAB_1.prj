@@ -1,0 +1,14 @@
+LAB_1
+OUTPUTS_TAG
+Alarm
+uint8_t
+INPUTS_TAG
+Temperature
+float
+INFO_TAG
+0x0000079A
+AB&amp;T
+0xABABA001
+0x00000001
+LAB_1
+END_TAG

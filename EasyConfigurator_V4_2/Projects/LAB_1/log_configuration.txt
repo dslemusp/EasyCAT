@@ -1,0 +1,85 @@
+
+Easy Configurator, configuration engine  V_3_2 
+
+log created on Wed Dec 15 18:21:36 2021
+
+Analyzing the project file
+
+Easy Configurator project LAB_1.prj
+
+OUTPUTS_TAG
+Line 4 --- Alarm                   uint8_t
+INPUTS_TAG
+Line 6 --- Temperature             float
+INFO_TAG
+0x0000079A
+AB&amp;T
+0xABABA001
+0x00000001
+LAB_1
+LAB_1
+END_TAG
+
+The LAB_1.prj configuration file is correct
+
+ByteNumOut 1
+ByteNumIn  4
+PdoNumOut  1
+PdoNumIn   1
+
+Creating the LAB_1.xml file
+
+PROJECT_TAG   LAB_1.prj
+VENDOID_TAG   0000079A
+VEN_NAM_TAG   AB&amp;T
+PRO_COD_TAG   ABABA001
+REVISIO_TAG   00000001
+DEV_NAM_TAG   LAB_1
+DEV_NAM_TAG   LAB_1
+
+FIRST_TAG
+
+Output entries
+          <Entry>
+            <Index>#x5</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>8</BitLen>
+            <Name>Alarm</Name>
+            <DataType>USINT</DataType>
+          </Entry>
+
+SECOND_TAG
+
+Input entries
+          <Entry>
+            <Index>#x6</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>Temperature</Name>
+            <DataType>REAL</DataType>
+          </Entry>
+
+LAST_TAG
+
+The LAB_1.xml file has been created
+
+Creating the LAB_1.h file
+
+#define CUST_BYTE_NUM_OUT	1
+#define CUST_BYTE_NUM_IN	4
+#define TOT_BYTE_NUM_ROUND_OUT	4
+#define TOT_BYTE_NUM_ROUND_IN	4
+
+
+Output entries
+		uint8_t     Alarm;
+
+Input entries
+		float       Temperature;
+
+The LAB_1.h file has been created
+
+Creating the LAB_1.bin file
+
+
+The LAB_1.bin file has been created
