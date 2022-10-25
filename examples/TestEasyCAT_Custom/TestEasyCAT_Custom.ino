@@ -118,11 +118,14 @@ void setup()
   pinMode(BitOut1, OUTPUT);                                       // 
   pinMode(BitOut2, OUTPUT);                                       //
   pinMode(BitOut3, OUTPUT);                                       //
+  pinMode(LED_BUILTIN, OUTPUT);
+
 
   pinMode(BitIn0, INPUT_PULLUP);                                  // digital input pins setting
   pinMode(BitIn1, INPUT_PULLUP);                                  // 
   pinMode(BitIn2, INPUT_PULLUP);                                  //
   pinMode(BitIn3, INPUT_PULLUP);                                  //
+  
 
   ContaUp = 0x0000;                                               //
   ContaDown = 0x00;                                               //
@@ -203,9 +206,9 @@ void Application ()
                                                         // --- four output bits management ----
                                                         //                          
     if (EASYCAT.BufferOut.Cust.Leds & (1<<0))           // the four output bits are mapped to the 
-      digitalWrite (BitOut0, HIGH);                     // lower nibble of output Byte 0
+      digitalWrite (LED_BUILTIN, HIGH);                     // lower nibble of output Byte 0
     else                                                // 
-      digitalWrite (BitOut0, LOW);                      // we read each bit and write it
+      digitalWrite (LED_BUILTIN, LOW);                      // we read each bit and write it
                                                         // to the corrisponding pin
     if (EASYCAT.BufferOut.Cust.Leds & (1<<1))           // 
       digitalWrite (BitOut1, HIGH);                     //
