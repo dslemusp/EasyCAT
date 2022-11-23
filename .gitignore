@@ -28,5 +28,6 @@
 
 # Executables
 *.exe
+!configurator/Exe/*
 *.out
 *.app
