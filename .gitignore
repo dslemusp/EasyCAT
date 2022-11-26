@@ -29,5 +29,6 @@
 # Executables
 *.exe
 !configurator/Exe/*
+!navigator/*
 *.out
 *.app
